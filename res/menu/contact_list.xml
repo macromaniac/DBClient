@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings" android:enabled="false" android:visible="true"/>
+    <item android:id="@+id/Add_Contact" android:orderInCategory="101" android:enabled="true" android:title="@string/addContactMenu" android:menuCategory="system" android:visible="true"></item>
+
+</menu>
