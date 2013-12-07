@@ -14,9 +14,9 @@
      android:layout_height="wrap_content"
      android:layout_alignParentTop="true"
      android:layout_centerHorizontal="true"
-     android:text="Possible Contacts"
+     android:text="@string/posscontactstr"
      android:textIsSelectable="false"
-     android:textSize="20dp" />
+     android:textSize="20sp" />
 
  <Button
      android:id="@+id/addcontactact"
@@ -25,7 +25,7 @@
      android:layout_alignParentBottom="true"
      android:layout_alignParentRight="true"
      android:onClick="addcontact_callback"
-     android:text="Add New Contact" />
+     android:text="@string/newcontactbutt" />
 
  <Button
      android:id="@+id/refreshbutt"
@@ -34,7 +34,7 @@
      android:layout_alignParentBottom="true"
      android:layout_alignParentLeft="true"
      android:onClick="refresh_callback"
-     android:text="Refresh" />
+     android:text="@string/refreshbutt" />
 
  <ListView
      android:id="@+id/contact_info"
