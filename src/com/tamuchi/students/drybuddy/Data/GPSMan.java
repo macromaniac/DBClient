@@ -6,4 +6,8 @@ public class GPSMan {
 	{
 		
 	}
+	public boolean isInRange()
+	{
+		return false;
+	}
 }
