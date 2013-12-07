@@ -51,11 +51,13 @@ public final class R {
         public static final int main=0x7f070002;
     }
     public static final class string {
+        public static final int ContactsMenu=0x7f050011;
         public static final int action_settings=0x7f050001;
         public static final int addContactMenu=0x7f050004;
         public static final int addcontactstr=0x7f05000c;
         public static final int app_name=0x7f050000;
         public static final int cancelbutt=0x7f05000d;
+        public static final int contactlistMenu=0x7f050010;
         public static final int geoloc=0x7f050007;
         public static final int hello_world=0x7f050002;
         public static final int newcontactbutt=0x7f05000a;

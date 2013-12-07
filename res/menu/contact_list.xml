@@ -1,10 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <item
-        android:id="@+id/action_settings"
         android:orderInCategory="100"
         android:showAsAction="never"
-        android:title="@string/action_settings" android:enabled="false" android:visible="true"/>
-    <item android:id="@+id/Add_Contact" android:orderInCategory="101" android:enabled="true" android:title="@string/addContactMenu" android:menuCategory="system" android:visible="true"></item>
+        android:title="@string/ContactsMenu" android:id="@id/ContactsMen"><menu>
+            <item android:id="@layout/activity_contact_list" android:menuCategory="system" android:orderInCategory="101" android:title="@string/contactlistMenu" android:visible="true" android:enabled="true"/>
+            <item android:id="@layout/activity_add_contact" android:title="@string/addContactMenu" android:menuCategory="system" android:orderInCategory="102" android:visible="true" android:enabled="true"/>
+        </menu>
+        
+    </item>
+    
+    <item android:id="@id/GeolocMen" android:title="@string/GeolocMenu" android:orderInCategory="101" android:menuCategory="system"></item>
+    <item android:id="@id/action_settings" android:title="@string/action_settings" android:orderInCategory="102" android:menuCategory="system"></item>
 
 </menu>

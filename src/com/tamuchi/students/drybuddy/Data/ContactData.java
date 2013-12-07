@@ -49,10 +49,12 @@ public class ContactData
 	public void addContact(Contact c)
 	{
 		contacts.add(c);
+		calcChecksum();
 	}
 	public void remContact(Contact c)
 	{
 		contacts.remove(c);
+		calcChecksum();
 	}
 	public ArrayList<Contact> getContacts()
 	{
