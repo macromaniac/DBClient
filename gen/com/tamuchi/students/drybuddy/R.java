@@ -24,18 +24,19 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int Add_Contact=0x7f08000e;
-        public static final int action_settings=0x7f08000d;
+        public static final int Add_Contact=0x7f08000f;
+        public static final int action_settings=0x7f08000e;
         public static final int addbutton=0x7f080002;
         public static final int addcontactact=0x7f080007;
         public static final int backbutt=0x7f080005;
         public static final int contact_info=0x7f080009;
-        public static final int geolocbutt=0x7f08000b;
+        public static final int geolocbutt=0x7f08000c;
+        public static final int geoloctext=0x7f08000d;
         public static final int initmessage=0x7f080006;
         public static final int newnumber=0x7f080000;
         public static final int newsobdate=0x7f080001;
         public static final int numlistbutt=0x7f08000a;
-        public static final int panicbutt=0x7f08000c;
+        public static final int panicbutt=0x7f08000b;
         public static final int phonenuminfo=0x7f080003;
         public static final int refreshbutt=0x7f080008;
         public static final int sobdateinfo=0x7f080004;
@@ -51,12 +52,15 @@ public final class R {
         public static final int main=0x7f070002;
     }
     public static final class string {
+        public static final int ContactListMenu=0x7f050012;
         public static final int action_settings=0x7f050001;
         public static final int addContactMenu=0x7f050004;
         public static final int addcontactstr=0x7f05000c;
         public static final int app_name=0x7f050000;
         public static final int cancelbutt=0x7f05000d;
         public static final int geoloc=0x7f050007;
+        public static final int geolocopt=0x7f050010;
+        public static final int geoloctext=0x7f050011;
         public static final int hello_world=0x7f050002;
         public static final int newcontactbutt=0x7f05000a;
         public static final int numlist=0x7f050006;

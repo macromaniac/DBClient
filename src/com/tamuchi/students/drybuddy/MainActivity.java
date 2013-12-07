@@ -16,6 +16,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
+import android.widget.Switch;
 
 public class MainActivity extends Activity {
 
@@ -41,8 +42,16 @@ public class MainActivity extends Activity {
 	public void geoloc_callback(View v)
 	{
 		//TODO: Start geolocation activity
-		Toast t = Toast.makeText(getApplicationContext(), "Geolocation clicked, HUZZAH", Toast.LENGTH_SHORT);
-		t.show();
+		boolean state = ((Switch) v).isChecked();
+		if (state)
+		{
+			Toast t = Toast.makeText(getApplicationContext(), "Geolocation clicked, HUZZAH", Toast.LENGTH_SHORT);
+			t.show();
+		}
+		else
+		{
+			
+		}
 	}
 	
 	public void panic_callback(View v)

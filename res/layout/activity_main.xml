@@ -19,23 +19,29 @@
         android:text="@string/numlist" />
 
     <Button
-        android:id="@+id/geolocbutt"
+        android:id="@+id/panicbutt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/numlistbutt"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
-        android:onClick="geoloc_callback"
-        android:text="@string/geoloc" />
-
-    <Button
-        android:id="@+id/panicbutt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/geolocbutt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
+        android:layout_marginTop="26dp"
         android:onClick="panic_callback"
         android:text="@string/panic" />
+
+    <Switch
+        android:id="@+id/geolocbutt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/numlistbutt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="58dp" />
+
+    <TextView
+        android:id="@+id/geoloctext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/geolocbutt"
+        android:layout_alignLeft="@+id/panicbutt"
+        android:text="@string/geoloctext" />
 
 </RelativeLayout>
