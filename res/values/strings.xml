@@ -17,5 +17,8 @@
     <string name="cancelbutt">Cancel</string>
     <string name="phonenumstr">Phone Number</string>
     <string name="sobdatestr">Sobriety Date</string>
+    <string name="contactlistMenu">Contact List</string>
+    <string name="ContactsMenu">Contacts</string>
+    <string name="GeolocMenu">Geolocation</string>
 
 </resources>
