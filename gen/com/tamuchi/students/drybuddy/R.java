@@ -243,7 +243,6 @@ containing a value of this type.
         public static final int main=0x7f0a0002;
     }
     public static final class string {
-<<<<<<< HEAD
         public static final int action_settings=0x7f06001b;
         public static final int addContactMenu=0x7f06001e;
         public static final int addcontactstr=0x7f060026;
@@ -354,26 +353,6 @@ containing a value of this type.
         public static final int sobdatestr=0x7f060029;
         public static final int title_activity_add_contact=0x7f06001d;
         public static final int title_activity_main=0x7f06001f;
-=======
-        public static final int ContactsMenu=0x7f050011;
-        public static final int action_settings=0x7f050001;
-        public static final int addContactMenu=0x7f050004;
-        public static final int addcontactstr=0x7f05000c;
-        public static final int app_name=0x7f050000;
-        public static final int cancelbutt=0x7f05000d;
-        public static final int contactlistMenu=0x7f050010;
-        public static final int geoloc=0x7f050007;
-        public static final int hello_world=0x7f050002;
-        public static final int newcontactbutt=0x7f05000a;
-        public static final int numlist=0x7f050006;
-        public static final int panic=0x7f050008;
-        public static final int phonenumstr=0x7f05000e;
-        public static final int posscontactstr=0x7f05000b;
-        public static final int refreshbutt=0x7f050009;
-        public static final int sobdatestr=0x7f05000f;
-        public static final int title_activity_add_contact=0x7f050003;
-        public static final int title_activity_main=0x7f050005;
->>>>>>> 84f2ae9b24ab8a79a0e35c021f4be2a7fcbdfeb6
     }
     public static final class style {
         /** 
