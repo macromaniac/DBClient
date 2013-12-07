@@ -1,6 +1,5 @@
 package com.tamuchi.students.drybuddy.Data;
 import java.util.Calendar;
-import java.util.Date;
 /**
  * A Contact contains the phone number of the person, as well as the date that they became sober. It can be used to calculate how long the person has been sober, as well as retrieve other relevant information.
  *
@@ -45,7 +44,7 @@ public class Contact
 	}
 	public int soberMon()
 	{
-		int ret;
+		int ret = 0;
 		Calendar curr = Calendar.getInstance();
 		if (curr.get(Calendar.YEAR) == sobDate.get(Calendar.YEAR))
 			if (curr.get(Calendar.MONTH) == sobDate.get(Calendar.MONTH))
