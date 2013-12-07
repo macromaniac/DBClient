@@ -6,5 +6,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_add_contact">AddContact</string>
     <string name="addContactMenu">Add Contact</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="numlist">Number List</string>
+    <string name="geoloc">Geolocation</string>
+    <string name="panic">Panic</string>
 
 </resources>
