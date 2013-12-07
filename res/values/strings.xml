@@ -20,5 +20,8 @@
     <string name="geolocopt">Geolocation</string>
     <string name="geoloctext">Geolocation</string>
     <string name="ContactListMenu">Contact List</string>
+    <string name="contactlistMenu">Contact List</string>
+    <string name="ContactsMenu">Contacts</string>
+    <string name="GeolocMenu">Geolocation</string>
 
 </resources>
