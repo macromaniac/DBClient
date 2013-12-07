@@ -53,6 +53,7 @@ public class MainActivity extends Activity {
 		ArrayList<Contact> contacts = dat.getContacts();
 		Random rand = new Random();
 		String num = contacts.get(rand.nextInt(contacts.size())).getNumber();
+		Log.d("PANIC", "Trying to call "+num);
 		Intent intent = new Intent(Intent.ACTION_CALL);
 		intent.setData(Uri.parse("tel:"+num));
 	}
