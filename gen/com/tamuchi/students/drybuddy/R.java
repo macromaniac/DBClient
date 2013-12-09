@@ -87,12 +87,15 @@ public final class R {
 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
+        OLD
+        <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
     
  API 11 theme customizations can go here. 
 
         Base application theme for API 14+. This theme completely replaces
         AppBaseTheme from BOTH res/values/styles.xml and
         res/values-v11/styles.xml on API 14+ devices.
+        OLD     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
     
  API 14 theme customizations can go here. 
          */

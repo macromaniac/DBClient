@@ -16,14 +16,19 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Toast;
-import android.widget.Switch;
+import android.widget.CompoundButton;
 
 public class MainActivity extends Activity {
 
+	GeoSoberService geoSoberService;
+	Intent geoIntent;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Globals.ctx = this;
+		geoIntent = new Intent(this,GeoSoberService.class);
+		startService(geoIntent);
 	}
 
 	@Override
@@ -41,16 +46,16 @@ public class MainActivity extends Activity {
 	
 	public void geoloc_callback(View v)
 	{
-		//TODO: Start geolocation activity
-		boolean state = ((Switch) v).isChecked();
+		boolean state = ((CompoundButton) v).isChecked();
 		if (state)
 		{
+			Globals.turnOffGps=false;
 			Toast t = Toast.makeText(getApplicationContext(), "Geolocation clicked, HUZZAH", Toast.LENGTH_SHORT);
 			t.show();
 		}
 		else
 		{
-			
+			Globals.turnOffGps=true;	
 		}
 	}
 	
