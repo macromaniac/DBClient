@@ -6,8 +6,15 @@ public final class Globals {
 	//Encouraging messages
 	static final String[] messages = {
 				"DONT EVEN THIINK ABOUT IT!",
+				"Ain\'t nobody got time fo\' that!",
 				"You're better than that!",
-				"You should call up some buddies!"};
+				"It\'s not worth it!",
+				"You should call up some buddies, dry buddies!",
+				"To booze is to lose, so win without sin.",
+				"To not drink...or to not drink...There is no question...",
+				"One drink is one too many!",
+				"Staying sober sure sounds swell!",
+				"The students who wrote this app will fail if you drink!"};
 	
 	//Where the points are taken from
 	static final String points = "http://xiffa.com/File.txt";

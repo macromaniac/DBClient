@@ -1,6 +1,6 @@
 package com.tamuchi.students.drybuddy;
 
-import android.util.Log;
+//import android.util.Log;
 
 public class LatLong
 {

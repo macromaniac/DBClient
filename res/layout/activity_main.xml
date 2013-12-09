@@ -39,12 +39,4 @@
         android:onClick="geoloc_callback"
         android:text="@string/geoloc" />
 
-    <TextView
-        android:id="@+id/geoloctext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/geolocbutt"
-        android:layout_alignLeft="@+id/panicbutt"
-        android:text="@string/geoloctext" />
-
 </RelativeLayout>

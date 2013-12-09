@@ -7,8 +7,8 @@
     <string name="title_activity_add_contact">AddContact</string>
     <string name="addContactMenu">Add Contact</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="numlist">Number List</string>
-    <string name="geoloc">Geolocation</string>
+    <string name="numlist">Anonymous Connections</string>
+    <string name="geoloc">Proximity Inspirations</string>
     <string name="panic">Panic</string>
     <string name="refreshbutt">Refresh</string>
     <string name="newcontactbutt">Add New Contact</string>
