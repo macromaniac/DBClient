@@ -15,7 +15,7 @@ import android.util.Log;
 
 public class UpdateService extends IntentService{
 	URL connection;
-	static String filepath = "";
+	static String filepath = "http://xiffa.com/contacts.txt";
 	static String filename = "contacts.txt";
 	public UpdateService() throws MalformedURLException {
 		super("DryBuddyUpdate");
@@ -25,20 +25,14 @@ public class UpdateService extends IntentService{
 	protected void onHandleIntent(Intent i)
 	{
 		try{
-			if (i.getAction().compareTo("DryBuddyUpdate")==0)
-			{
-				Write();
-			}
-			else
-			{
-				Log.d("DEBUG", "Intent "+i.getAction()+" not handled by service!");
-				return;
-			}
+			Write();
 		}
 		catch(Exception e) 
 		{
 			Log.d("DEBUG", "Error in onHandleIntent!");
 		}
+		//Done doing stuff, end service
+		stopSelf();
 	}
 	
 	private void Write() throws IOException

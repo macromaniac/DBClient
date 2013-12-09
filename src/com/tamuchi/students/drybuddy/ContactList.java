@@ -16,6 +16,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -41,6 +42,25 @@ public class ContactList extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.contact_list, menu);
 		return true;
+	}
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent i;
+	    switch(item.getItemId())
+	    {
+	    case R.id.ContactList:
+	    	i = new Intent(this, ContactList.class);
+	    	startActivity(i);
+	        break;
+	    case R.id.AddContact:
+	    	i = new Intent(this, AddContact.class);
+	    	startActivity(i);
+	        break;
+	    case R.id.Main:
+	    	i = new Intent(this, MainActivity.class);
+	    	startActivity(i);
+	        break;
+	    }
+	    return true;
 	}
 	
 	@Override
@@ -114,6 +134,9 @@ public class ContactList extends Activity {
 	}
 	public void refresh_callback(View v)
 	{
+		//Get latest list//
+		Intent updateIntent = new Intent(this, UpdateService.class);
+		startService(updateIntent);
 		updateContacts();
 	}
 }

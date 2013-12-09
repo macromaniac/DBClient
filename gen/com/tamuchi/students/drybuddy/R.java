@@ -24,7 +24,10 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f08000e;
+        public static final int AddContact=0x7f08000f;
+        public static final int ContactList=0x7f08000e;
+        public static final int Main=0x7f080010;
+        public static final int action_settings=0x7f080011;
         public static final int addbutton=0x7f080002;
         public static final int addcontactact=0x7f080007;
         public static final int backbutt=0x7f080005;

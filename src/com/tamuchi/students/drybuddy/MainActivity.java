@@ -14,6 +14,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 import android.widget.CompoundButton;
@@ -29,6 +30,15 @@ public class MainActivity extends Activity {
 		Globals.ctx = this;
 		geoIntent = new Intent(this,GeoSoberService.class);
 		startService(geoIntent);
+		//Check to see if contacts file exists//
+		try {
+			openFileInput("contacts.txt");
+		} catch (FileNotFoundException e) {
+			//File doesn't exist already, download a copy
+			Intent updateIntent = new Intent(this, UpdateService.class);
+			startService(updateIntent);
+		}
+		
 	}
 
 	@Override
@@ -38,6 +48,25 @@ public class MainActivity extends Activity {
 		return true;
 	}
 
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent i;
+	    switch(item.getItemId())
+	    {
+	    case R.id.ContactList:
+	    	i = new Intent(this, ContactList.class);
+	    	startActivity(i);
+	        break;
+	    case R.id.AddContact:
+	    	i = new Intent(this, AddContact.class);
+	    	startActivity(i);
+	        break;
+	    case R.id.Main:
+	    	i = new Intent(this, MainActivity.class);
+	    	startActivity(i);
+	        break;
+	    }
+	    return true;
+	}
 	public void numlist_callback(View v)
 	{
 		Intent intent = new Intent(this, ContactList.class);

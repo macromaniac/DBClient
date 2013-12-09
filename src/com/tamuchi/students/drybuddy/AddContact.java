@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -29,22 +30,32 @@ public class AddContact extends Activity {
 		getMenuInflater().inflate(R.menu.add_contact, menu);
 		return true;
 	}
+	public boolean onOptionsItemSelected(MenuItem item) {
+		Intent i;
+	    switch(item.getItemId())
+	    {
+	    case R.id.ContactList:
+	    	i = new Intent(this, ContactList.class);
+	    	startActivity(i);
+	        break;
+	    case R.id.AddContact:
+	    	i = new Intent(this, AddContact.class);
+	    	startActivity(i);
+	        break;
+	    case R.id.Main:
+	    	i = new Intent(this, MainActivity.class);
+	    	startActivity(i);
+	        break;
+	    }
+	    return true;
+	}
+	
 	public void cancelbutt_callback(View v)
 	{
 		finish();
 	}
 	public void addbutt_callback(View v)
 	{
-		ContactData data;
-		try {
-			data = new ContactData(ContactList.CONTACTFILENAME, this);
-		} catch (NumberFormatException e) {
-			Log.d("ERROR", "A number in Contact Data was not correctly formatted");
-			return;
-		} catch (IOException e) {
-			Log.d("ERROR", "The file "+ContactList.CONTACTFILENAME+" does not exist.");
-			return;
-		}
 		EditText number = (EditText)findViewById(R.id.newnumber);
 		EditText date = (EditText)findViewById(R.id.newsobdate);
 		String phone = number.getText().toString();
@@ -81,6 +92,20 @@ public class AddContact extends Activity {
 		time = time.substring(time.indexOf("/")+1);
 		int yrs = Integer.parseInt(time);
 		Contact c = new Contact(yrs, mon, day, phone);
+		//Get latest file//
+		Intent updateIntent = new Intent(this, UpdateService.class);
+		startService(updateIntent);
+		//Use data from new list and add to it
+		ContactData data;
+		try {
+			data = new ContactData(ContactList.CONTACTFILENAME, this);
+		} catch (NumberFormatException e) {
+			Log.d("ERROR", "A number in Contact Data was not correctly formatted");
+			return;
+		} catch (IOException e) {
+			Log.d("ERROR", "The file "+ContactList.CONTACTFILENAME+" does not exist.");
+			return;
+		}
 		data.addContact(c);
 		try {
 			data.writeData(ContactList.CONTACTFILENAME, this);
