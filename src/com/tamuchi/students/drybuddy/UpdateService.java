@@ -42,7 +42,12 @@ public class UpdateService extends IntentService{
 		FileOutputStream out = openFileOutput(filename, MODE_PRIVATE);
 		String tmp;
 		while( (tmp = in.readLine()) != null)
+		{
 			out.write(tmp.getBytes());
+			out.write(System.getProperty("line.separator").getBytes());
+		}
+		
+		out.close();
 	}
 
 }
